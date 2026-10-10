@@ -1,10 +1,155 @@
+/* Step 2.4: accent color available to the whole document */
+html {
+  --color-accent: oklch(65% 50% 0);
+  accent-color: var(--color-accent);
+}
+
 body {
   /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
+     and use the OS’s UI font as the website font
+   */
   font: 100%/1.5 system-ui;
+
+  /* Step 1: limit width, center, and keep a gap from the edges on small screens */
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
 }
+
 img {
-    width: 300px;
-    height: auto;
+  width: 300px;
+  height: auto;
+}
+
+/* Step 4.4: heading defaults and stronger hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+/* Step 2: navigation bar */
+nav ul,
+nav li {
+  display: contents;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 1em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+
+  a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  a.current {
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.1em;
+  }
+
+  a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+    padding-bottom: 0.1em;
+    background-color: oklch(from var(--color-accent) 95% 5% h);
+  }
+}
+
+/* Step 3: contact form */
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+
+  label {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+  }
+
+  button {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Step 4: projects grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+
+  article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+/* Step 5: resume */
+.resume {
+  > section {
+    margin-block: 2em;
+  }
+
+  section > h2 {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.2em;
+  }
+
+  article {
+    margin-block: 1em;
+    padding: 0.75em 1em;
+    border-left: 4px solid oklch(from var(--color-accent) 85% 10% h);
+    background-color: oklch(from var(--color-accent) 98% 2% h);
+    border-radius: 0 0.5em 0.5em 0;
+
+    h3 {
+      margin-block: 0 0.25em;
+    }
+
+    p {
+      margin-block: 0.25em;
+    }
+  }
+
+  time {
+    color: oklch(50% 3% 200);
+    font-style: italic;
+  }
+
+  /* Skills and awards as tag-like chips */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.2em 0.8em;
+      border-radius: 1em;
+      background-color: oklch(from var(--color-accent) 95% 5% h);
+    }
+  }
 }
