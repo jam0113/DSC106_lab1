@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Personal Portfolio Website",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A responsive personal website built across the DSC 106 labs with HTML, CSS grid and flexbox, a JavaScript-generated navigation bar, a persistent dark mode switch, and project data loaded from JSON."
+  },
+  {
+    "title": "Blockography.AI",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "An ACM AI Competition image classifier using handcrafted features (HSV statistics, BGR histograms, LBP/GLCM texture, entropy, vegetation ratios) and a Random Forest tuned with randomized search and 3-fold cross-validation. Finished in the top 30% of 50 participants."
+  },
+  {
+    "title": "Baymaxxing",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "An AI-driven mental health web app built with Python, Flask, and NLP at DataOrbit 2025. Collected Reddit data with the PRAW API, integrated generative AI for contextual responses, and built a Tableau dashboard of sentiment and severity trends."
+  },
+  {
+    "title": "Collision Event Analysis Pipeline",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Data-analysis pipelines in C++ and ROOT at the Institute of Physics, Academia Sinica, processing 0.5 to 1 million simulated collision events with statistical fitting, background filtering, and feature extraction."
+  },
+  {
+    "title": "Configurable Detector Simulation",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A configurable particle detector simulation used to generate machine learning training data and run efficiency studies. Findings were presented in a research poster session."
+  },
+  {
+    "title": "TSA Event Records System",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Organized event registration forms, participant records, attendance data, and meeting notes for the UCSB Taiwanese Student Association to support event planning and decision-making."
+  },
+  {
+    "title": "Reball",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Cofounded a startup that recycled used basketballs into eco-friendly consumer products. Designed the recycling system and a backpack prototype, and led outreach with schools and sponsors."
+  },
+  {
+    "title": "Dermatoscope Market Analysis",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Analyzed dermatoscope industry reports at Apollo Medical Optics to identify market trends and competitive positioning, and prepared analysis summaries for leadership review."
+  },
+  {
+    "title": "OCT Imaging Test Data",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Organized optical testing data from OCT imaging systems and created structured documentation workflows for experimental data."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa laudantium quas eum veritatis."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sint porro minima modi molestias."
+  }
+]
