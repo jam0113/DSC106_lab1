@@ -131,7 +131,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   containerElement.innerHTML = '';
 
   if (!projects || projects.length === 0) {
-    containerElement.innerHTML = '<p>No projects to show yet.</p>';
+    containerElement.innerHTML = '<p>No projects to show.</p>';
     return;
   }
 
@@ -140,7 +140,10 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     article.innerHTML = `
       <${headingLevel}>${project.title}</${headingLevel}>
       <img src="${project.image ?? 'https://dsc106.com/labs/lab02/images/empty.svg'}" alt="${project.title}">
-      <p>${project.description ?? ''}</p>
+      <div>
+        <p>${project.description ?? ''}</p>
+        <p class="project-year">c. ${project.year ?? 'n/a'}</p>
+      </div>
     `;
     containerElement.appendChild(article);
   }
