@@ -121,6 +121,13 @@ form {
   }
 }
 
+/* Color block for projects without an image */
+.project-color {
+  aspect-ratio: 2 / 1;
+  border-radius: 0.5em;
+  background: linear-gradient(135deg, oklch(75% 0.13 var(--hue)), oklch(62% 0.15 calc(var(--hue) + 30)));
+}
+
 /* Lab 5 Step 0.1: project year */
 .project-year {
   font-family: Baskerville, serif;

@@ -115,6 +115,17 @@ export async function fetchJSON(url) {
   }
 }
 
+// Show the project's image, or a color block if it doesn't have one yet.
+// The hue comes from the title, so a project keeps its color when filtered.
+function renderProjectImage(project) {
+  if (project.image) {
+    return `<img src="${project.image}" alt="${project.title}">`;
+  }
+
+  const hue = [...project.title].reduce((h, c) => (h * 47 + c.charCodeAt(0)) % 360, 0);
+  return `<div class="project-color" style="--hue: ${hue}"></div>`;
+}
+
 // Lab 4 Step 1.4: render an array of projects into a container
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   if (!containerElement) {
@@ -139,7 +150,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const article = document.createElement('article');
     article.innerHTML = `
       <${headingLevel}>${project.title}</${headingLevel}>
-      <img src="${project.image ?? 'https://dsc106.com/labs/lab02/images/empty.svg'}" alt="${project.title}">
+      ${renderProjectImage(project)}
       <div>
         <p>${project.description ?? ''}</p>
         <p class="project-year">c. ${project.year ?? 'n/a'}</p>

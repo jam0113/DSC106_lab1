@@ -2,73 +2,61 @@
   {
     "title": "Personal Portfolio Website",
     "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "A responsive personal website built across the DSC 106 labs with HTML, CSS grid and flexbox, a JavaScript-generated navigation bar, a persistent dark mode switch, and project data loaded from JSON."
   },
   {
     "title": "Donkeycar Night-to-Day Generalization",
     "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "A DSC 190 project testing whether a self-driving RC car's steering model trained on nighttime footage can generalize to daytime. Extended a Donkeycar fork's image augmentation pipeline with gamma, HSV, sharpening, brightness, overexposure, and shadow effects."
   },
   {
     "title": "DataHacks 2026: Simplified Quant Trading",
     "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "3rd Place, Economics Track. Co-developed a crypto prediction-market trading model using momentum, volatility-adjusted thresholds, order-book imbalance, and arbitrage; Optuna tuning over 40+ backtests reached +24.5% P&L and a 9.45 Sharpe on 178 hours of training data. Solely built a no-code FastAPI and Next.js web app for tuning strategies and running backtests."
   },
   {
     "title": "Recipe Rating Prediction",
     "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "Are healthier recipes rated differently on Food.com? Merged 83,782 recipes with 731,927 user interactions, used a permutation test to find a statistically significant but very small rating difference, and built a logistic regression classifier with engineered and TF-IDF features to predict 5-star recipes, with a fairness test across preparation times."
   },
   {
     "title": "Blockography.AI",
     "year": "2025",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "An ACM AI Competition image classifier using handcrafted features (HSV statistics, BGR histograms, LBP/GLCM texture, entropy, vegetation ratios) and a Random Forest tuned with randomized search and 3-fold cross-validation. Finished in the top 30% of 50 participants."
   },
   {
     "title": "Baymaxxing",
     "year": "2025",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "An AI-driven mental health web app built with Python, Flask, and NLP at DataOrbit 2025. Collected Reddit data with the PRAW API, integrated generative AI for contextual responses, and built a Tableau dashboard of sentiment and severity trends."
   },
   {
     "title": "Collision Event Analysis Pipeline",
     "year": "2025",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "Data-analysis pipelines in C++ and ROOT at the Institute of Physics, Academia Sinica, processing 0.5 to 1 million simulated collision events with statistical fitting, background filtering, and feature extraction."
   },
   {
     "title": "Configurable Detector Simulation",
     "year": "2025",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "A configurable particle detector simulation used to generate machine learning training data and run efficiency studies. Findings were presented in a research poster session."
   },
   {
     "title": "TSA Event Records System",
     "year": "2024",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "Organized event registration forms, participant records, attendance data, and meeting notes for the UCSB Taiwanese Student Association to support event planning and decision-making."
   },
   {
     "title": "Reball",
     "year": "2023",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "Cofounded a startup that recycled used basketballs into eco-friendly consumer products. Designed the recycling system and a backpack prototype, and led outreach with schools and sponsors."
   },
   {
     "title": "Dermatoscope Market Analysis",
     "year": "2022",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "Analyzed dermatoscope industry reports at Apollo Medical Optics to identify market trends and competitive positioning, and prepared analysis summaries for leadership review."
   },
   {
     "title": "OCT Imaging Test Data",
     "year": "2022",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "Organized optical testing data from OCT imaging systems and created structured documentation workflows for experimental data."
   }
 ]
