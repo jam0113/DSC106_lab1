@@ -131,7 +131,12 @@ function renderScatterPlot(data, commits) {
   gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 
   // Step 2.2: axes
-  const xAxis = d3.axisBottom(xScale);
+  // One tick per week with a single date format. D3's default picks every
+  // other day of the month, so the 31st and the 1st land next to each other.
+  const xAxis = d3
+    .axisBottom(xScale)
+    .ticks(d3.timeWeek.every(1))
+    .tickFormat(d3.timeFormat('%b %d'));
   const yAxis = d3
     .axisLeft(yScale)
     .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
