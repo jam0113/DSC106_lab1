@@ -120,7 +120,10 @@ export async function fetchJSON(url) {
 // The hue comes from the title, so a project keeps its color when filtered.
 function renderProjectImage(project) {
   if (project.image) {
-    return `<img src="${project.image}" alt="${project.title}">`;
+    // Resolve relative to the site root (where global.js lives), so the same
+    // path works on both the home page and /projects/
+    const src = new URL(project.image, import.meta.url).href;
+    return `<img src="${src}" alt="Screenshot of ${project.title}">`;
   }
 
   const hue = [...project.title].reduce((h, c) => (h * 47 + c.charCodeAt(0)) % 360, 0);
@@ -155,6 +158,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       <div>
         <p>${project.description ?? ''}</p>
         <p class="project-year">c. ${project.year ?? 'n/a'}</p>
+        ${project.url ? `<p><a href="${project.url}" target="_blank">View project →</a></p>` : ''}
       </div>
     `;
     containerElement.appendChild(article);

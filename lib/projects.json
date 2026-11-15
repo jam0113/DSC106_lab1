@@ -1,5 +1,17 @@
 [
   {
+    "title": "Bikewatching",
+    "year": "2026",
+    "url": "https://jam0113.github.io/bikewatching/",
+    "image": "images/bikewatching.png",
+    "description": "An interactive Mapbox and D3 map of about 260,000 Bluebikes trips in Boston and Cambridge from March 2024. Circle size shows each station's traffic, color shows whether more trips start or end there, and a time-of-day slider filters the trips."
+  },
+  {
+    "title": "DataHacks 2026: Simplified Quant Trading",
+    "year": "2026",
+    "description": "3rd Place, Economics Track. Co-developed a crypto prediction-market trading model using momentum, volatility-adjusted thresholds, order-book imbalance, and arbitrage; Optuna tuning over 40+ backtests reached +24.5% P&L and a 9.45 Sharpe on 178 hours of training data. Solely built a no-code FastAPI and Next.js web app for tuning strategies and running backtests."
+  },
+  {
     "title": "Personal Portfolio Website",
     "year": "2026",
     "description": "A responsive personal website built across the DSC 106 labs with HTML, CSS grid and flexbox, a JavaScript-generated navigation bar, a persistent dark mode switch, and project data loaded from JSON."
@@ -8,11 +20,6 @@
     "title": "Donkeycar Night-to-Day Generalization",
     "year": "2026",
     "description": "A DSC 190 project testing whether a self-driving RC car's steering model trained on nighttime footage can generalize to daytime. Extended a Donkeycar fork's image augmentation pipeline with gamma, HSV, sharpening, brightness, overexposure, and shadow effects."
-  },
-  {
-    "title": "DataHacks 2026: Simplified Quant Trading",
-    "year": "2026",
-    "description": "3rd Place, Economics Track. Co-developed a crypto prediction-market trading model using momentum, volatility-adjusted thresholds, order-book imbalance, and arbitrage; Optuna tuning over 40+ backtests reached +24.5% P&L and a 9.45 Sharpe on 178 hours of training data. Solely built a no-code FastAPI and Next.js web app for tuning strategies and running backtests."
   },
   {
     "title": "Recipe Rating Prediction",
