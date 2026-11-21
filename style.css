@@ -355,9 +355,16 @@ dl.info[hidden]:not(:hover, :focus-within) {
 
 /* Lab 6 Step 3.1: grow dots on hover */
 #chart circle {
-  transition: 200ms;
+  /* Lab 8 Step 1.4: radius changes take longer for bigger circles,
+     so every circle grows at the same speed */
+  transition: all 200ms, r calc(var(--r) * 100ms);
   transform-origin: center;
   transform-box: fill-box;
+
+  /* Lab 8 Step 1.4: new circles grow in from nothing */
+  @starting-style {
+    r: 0;
+  }
 }
 
 #chart circle:hover {
@@ -382,4 +389,114 @@ dl.info[hidden]:not(:hover, :focus-within) {
 /* Lab 6 Step 5.4: selected commits */
 #chart circle.selected {
   fill: #ff6b6b;
+}
+
+/* Lab 8 Step 1.1: slider and the date it points to, on one line */
+#time-filter {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+
+  label {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+  }
+
+  input {
+    flex: 1;
+  }
+
+  time {
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Lab 8 Step 2: unit visualization of files */
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  row-gap: 0.5em;
+
+  > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  dt {
+    grid-column: 1;
+    margin: 0;
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    small {
+      display: block;
+      font-size: 75%;
+      opacity: 0.6;
+    }
+  }
+
+  dd {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    gap: 0.15em;
+    padding-top: 0.6em;
+    margin-left: 0;
+  }
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color);
+  border-radius: 50%;
+}
+
+/* Lab 8 Step 3.1: scrollytelling, story on the left, sticky chart on the right */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  /* The chart gets more room than the text */
+  flex: 1.6;
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
+}
+
+/* Space the paragraphs out so each one gets its turn in the middle of the screen */
+#scatter-story .step {
+  padding-bottom: 60vh;
+}
+
+/* The chart is scaled down to fit its column, so draw the axis labels
+   bigger (in chart units) to keep them readable */
+#chart .tick text {
+  font-size: 18px;
+}
+
+#scatter-story .step:last-child {
+  padding-bottom: 20vh;
 }
