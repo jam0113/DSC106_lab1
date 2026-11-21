@@ -465,7 +465,8 @@ dl.info[hidden]:not(:hover, :focus-within) {
 #scrolly-1 {
   position: relative;
   display: flex;
-  gap: 1rem;
+  /* Wide gap: the chart's hour labels hang off its left edge */
+  gap: 3rem;
 
   > * {
     flex: 1;
@@ -480,23 +481,40 @@ dl.info[hidden]:not(:hover, :focus-within) {
   /* The chart gets more room than the text */
   flex: 1.6;
   position: sticky;
-  top: 0;
+  /* Stays near the middle of the screen, level with the active paragraph */
+  top: 15vh;
   left: 0;
   bottom: auto;
-  height: 50vh;
+  height: 70vh;
 }
 
-/* Space the paragraphs out so each one gets its turn in the middle of the screen */
+/* Each commit is a card. Only the one in the middle of the screen
+   (the one the chart is showing) is fully visible. */
 #scatter-story .step {
-  padding-bottom: 60vh;
+  margin-block: 0 35vh;
+  padding: 1em 1.25em;
+  border-left: 4px solid color-mix(in oklch, var(--color-accent), canvas 60%);
+  border-radius: 0 0.5em 0.5em 0;
+  background: color-mix(in oklch, var(--color-accent), canvas 94%);
+  opacity: 0.35;
+  transition: opacity 300ms;
+
+  &.is-active {
+    opacity: 1;
+    border-left-color: var(--color-accent);
+  }
+
+  &:first-child {
+    margin-top: 20vh;
+  }
+
+  &:last-child {
+    margin-bottom: 30vh;
+  }
 }
 
 /* The chart is scaled down to fit its column, so draw the axis labels
    bigger (in chart units) to keep them readable */
 #chart .tick text {
   font-size: 18px;
-}
-
-#scatter-story .step:last-child {
-  padding-bottom: 20vh;
 }

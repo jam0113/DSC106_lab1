@@ -470,6 +470,10 @@ function onTimeSliderChange() {
 // Lab 8 Step 3.3: when a commit's paragraph reaches the middle of the screen,
 // show the repo as it was at that commit (and move the slider to match)
 function onStepEnter(response) {
+  // Highlight the paragraph the chart is showing
+  d3.selectAll('#scatter-story .step').classed('is-active', false);
+  d3.select(response.element).classed('is-active', true);
+
   commitMaxTime = response.element.__data__.datetime;
   commitProgress = timeScale(commitMaxTime);
   slider.value = commitProgress;
